@@ -1,19 +1,13 @@
-// BooksGrid.js
+// BooksGrid.jsx
 import React from 'react';
-import './BooksGrid.scss'; // Make sure to create a corresponding SCSS file for styles
+import BookCard from './BookCard'; // Adjust the path as necessary
+import './BooksGrid.scss';
 
 const BooksGrid = ({ books }) => {
   return (
     <div className="books-grid">
       {books.map((book) => (
-        <div className="book" key={book.id}>
-          <img src={book.image} alt={book.title} className="book-image"/>
-          <div className="book-info">
-            <h3 className="book-title">{book.title}</h3>
-            <p className="book-author">{book.author}</p>
-            <p className="book-description">{book.description}</p>
-          </div>
-        </div>
+        <BookCard key={book.id} book={book} /> // Pass the whole book object to the BookCard component
       ))}
     </div>
   );

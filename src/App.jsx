@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { fetchBooks } from './services/BooksService'; // Make sure the path matches your project structure
-import BooksGrid from './components/BooksGrid.jsx';
-import Header from './components/Header.jsx';
-import SearchForm from './components/SearchForm.jsx';
-import './App.scss'; // Assuming you have a global SCSS file for styles
+import { fetchBooks } from './services/BooksService'; // Adjust the path as necessary
+import BooksGrid from './components/BooksGrid.jsx'; // Adjust the path as necessary
+import Header from './components/Header.jsx'; // Adjust the path as necessary
+import SearchForm from './components/SearchForm.jsx'; // Adjust the path as necessary
+import './App.scss'; // Adjust the path as necessary
 
 function App() {
   const [books, setBooks] = useState([]);
