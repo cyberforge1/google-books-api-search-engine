@@ -22,3 +22,31 @@ export const fetchBooks = async (query, maxResults = 28) => { // Set a default v
     return [];
   }
 };
+
+
+
+
+export const fetchBookDetails = async (bookId) => {
+  const requestURL = `${GOOGLE_BOOKS_API_ENDPOINT}/${bookId}`;
+
+  try {
+    const response = await fetch(requestURL);
+    const data = await response.json();
+    return {
+      id: data.id,
+      image: data.volumeInfo.imageLinks ? data.volumeInfo.imageLinks.thumbnail : '',
+      title: data.volumeInfo.title,
+      author: data.volumeInfo.authors ? data.volumeInfo.authors.join(', ') : 'Unknown Author',
+      description: data.volumeInfo.description ? data.volumeInfo.description : 'No description available',
+      publishDate: data.volumeInfo.publishedDate, // Publishing date of the book
+      country: data.saleInfo.country, // Country information from saleInfo
+      pageCount: data.volumeInfo.pageCount, // Number of pages
+      categories: data.volumeInfo.categories ? data.volumeInfo.categories.join(', ') : 'No categories available', // Book categories
+      dimensions: data.volumeInfo.dimensions ? `${data.volumeInfo.dimensions.height} x ${data.volumeInfo.dimensions.width}` : 'Dimensions not available', // Physical dimensions of the book, if available
+      publisher: data.volumeInfo.publisher, // Publisher of the book
+    };
+  } catch (error) {
+    console.error('Error fetching book details:', error);
+    return null;
+  }
+};
