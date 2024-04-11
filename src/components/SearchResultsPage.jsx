@@ -1,8 +1,7 @@
-// SearchResultsPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { fetchBooks } from '../services/BooksService';
 import BooksGrid from './BooksGrid';
+import { fetchBooks } from '../services/BooksService';
 
 const SearchResultsPage = () => {
   const [books, setBooks] = useState([]);
@@ -11,13 +10,22 @@ const SearchResultsPage = () => {
 
   useEffect(() => {
     if (query) {
-      fetchBooks(query).then(setBooks);
+      fetchBooks(query).then((fetchedBooks) => {
+        if (fetchedBooks.length === 0) {
+          alert('No books found that match your search.');
+        }
+        setBooks(fetchedBooks);
+      });
     }
   }, [query]);
 
   return (
     <div className="search-results-page">
-      <BooksGrid books={books} />
+      {books.length > 0 ? (
+        <BooksGrid books={books} />
+      ) : (
+        <p>No books found. Try a different search!</p>
+      )}
     </div>
   );
 };
