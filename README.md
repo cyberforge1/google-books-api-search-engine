@@ -2,16 +2,20 @@
 
 # Google Books API Search Engine
 
-# Project Overview
+## Project Overview
 
 This project will allow the user to search for a book in the Google Books Database. This will be achieved by making asynchronous requests to the API and displaying the results dynamically in a React application. 
 
+## Deployment
 
-# Screenshot
+https://bookquest-api-search-engine.netlify.app/
+
+
+## Screenshot
 
 ![Local image](public/bookquest.png "Project Screenshot")
 
-# Table of Contents
+## Table of Contents
 - Goals
 - How to use
 - Tech Stack
@@ -21,13 +25,13 @@ This project will allow the user to search for a book in the Google Books Databa
 - Additions & Improvements
 
 
-# Goals
+## Goals
 
 - To create an modular and reactive UI with React
 - Implementation of asynchronous programming to fetch search engine results
 
 
-# How to use / Important ELements
+## How to use / Important ELements
 
 This application will have the following features:
 
@@ -41,7 +45,7 @@ This application will have the following features:
     - This page will have a link to homepage, a search bar, results per page, display page number and allow the user to change page
 
 
-# Tech Stack
+## Tech Stack
 
 HTML
 CSS/SCSS
@@ -50,9 +54,10 @@ React
 Javascript 
 Bootstrap
 Google Books API
+Netlify
 
 
-# Implementation
+## Implementation
 
     - MVP (basic requirements)
 
@@ -60,9 +65,9 @@ Google Books API
 
     - Logic Strategy 
 
-# Code
+## Code
 
-# Issues / Bugs
+## Issues / Bugs
 
-# Potential Additions
+## Potential Additions
 
