@@ -1,7 +1,9 @@
 
+// BooksService.js
+
 const GOOGLE_BOOKS_API_ENDPOINT = 'https://www.googleapis.com/books/v1/volumes';
 
-export const fetchBooks = async (query, maxResults = 28) => {
+export const fetchBooks = async (query, maxResults = 40) => {
   const formattedQuery = encodeURIComponent(query);
   const requestURL = `${GOOGLE_BOOKS_API_ENDPOINT}?q=${formattedQuery}&maxResults=${maxResults}`;
 
