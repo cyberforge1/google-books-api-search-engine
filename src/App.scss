@@ -1,32 +1,34 @@
 // App.scss
+body{
+    background-color: #FAF9F6
+}
+
 
 .pagination-controls {
     display: flex;
-    justify-content: space-between; // This will space out the Prev and Next buttons on either end
-    margin: 20px 0; // Add some margin for better spacing from other elements
+    justify-content: space-between;
+    margin: 20px 0;
   }
   
   .prev-button, .next-button {
-    padding: 10px 20px; // Give some padding for better touch area and visibility
-    background-color: #55AEE0; // Example button color
-    color: white; // Text color for the button
+    padding: 10px 20px;
+    background-color: #55AEE0;
+    color: white; 
     border: none;
-    border-radius: 5px; // Rounded corners for aesthetics
-    cursor: pointer; // Cursor indicates an interactive element
+    border-radius: 5px; 
+    cursor: pointer; 
   
     &:disabled {
-      background-color: #ccc; // Gray out the button when disabled
-      cursor: default; // Reset cursor to default when button is not clickable
+      background-color: #ccc; 
+      cursor: default; 
     }
   }
   
-  // You can add additional styles for hover effects, etc.
   .prev-button:hover,
   .next-button:hover {
-    background-color: #0056b3; // Darken the button on hover for a visual feedback
+    background-color: #0056b3;
   }
   
-  // This ensures that if there is no content, the footer remains at the bottom
   .App {
     display: flex;
     flex-direction: column;
@@ -40,30 +42,28 @@
 
 .pagination-settings {
     display: flex;
-    align-items: center; // Ensures the label and dropdown are aligned properly
-    margin: 20px 0; // Adds some vertical space around the section
-  
+    align-items: center; 
+    margin: 20px 0; 
     label {
-      margin-right: 10px; // Space between label and dropdown
-      font-size: 16px; // Adjust font size as needed
-      color: #333; // Adjust label color as needed
+      margin-right: 10px; 
+      font-size: 16px;
+      color: #333; 
     }
   
     select {
-      padding: 8px 12px; // Padding inside the dropdown
-      border: 1px solid #ccc; // Border color
-      border-radius: 4px; // Rounded corners
-      background-color: white; // Background color
-      font-size: 16px; // Match font size to label or adjust as needed
-      cursor: pointer; // Indicates the dropdown is clickable
-  
+      padding: 8px 12px; 
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: white;
+      font-size: 16px; 
+      cursor: pointer; 
       &:hover {
-        border-color: #888; // Change border color on hover
+        border-color: #888; 
       }
   
       &:focus {
-        outline: none; // Removes default focus outline
-        border-color: #0056b3; // Border color when element is focused
+        outline: none; 
+        border-color: #0056b3;
       }
     }
   }

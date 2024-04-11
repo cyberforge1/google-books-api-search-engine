@@ -3,12 +3,10 @@
 import React, { useState } from 'react';
 import { fetchBooks, fetchBookDetails } from './services/BooksService.js';
 import BooksGrid from './components/BooksGrid.jsx';
-import Header from './components/Header.jsx'; 
-import SearchForm from './components/SearchForm.jsx'; 
-import './App.scss';
+import Header from './components/Header.jsx';
+import SearchForm from './components/SearchForm.jsx';
 import Modal from './components/Modal';
-
-
+import './App.scss';
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -18,12 +16,12 @@ function App() {
   const [selectedBook, setSelectedBook] = useState(null);
 
   const handleSearch = async (query) => {
-    const books = await fetchBooks(query);
-    setBooks(books);
-    console.log(books);
+    const fetchedBooks = await fetchBooks(query);
+    setBooks(fetchedBooks);
   };
 
-  const handlePaginationChange = (newItemsPerPage) => {
+  const handlePaginationChange = (event) => {
+    const newItemsPerPage = Number(event.target.value);
     setItemsPerPage(newItemsPerPage);
     setCurrentPage(1); // Reset to the first page when items per page changes
   };
@@ -31,7 +29,6 @@ function App() {
   const handleBookClick = async (book) => {
     try {
       const detailedBook = await fetchBookDetails(book.id);
-      console.log(detailedBook);
       setSelectedBook(detailedBook);
       setIsModalOpen(true);
     } catch (error) {
@@ -44,13 +41,14 @@ function App() {
     setSelectedBook(null);
   };
 
-   // Calculating the number of pages and slicing the books for the current page
-   const indexOfLastBook = currentPage * itemsPerPage;
-   const indexOfFirstBook = indexOfLastBook - itemsPerPage;
-   const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
- 
+  const handlePrevPage = () => setCurrentPage(prev => prev - 1);
+  const handleNextPage = () => setCurrentPage(prev => prev + 1);
 
-   return (
+  const indexOfLastBook = currentPage * itemsPerPage;
+  const indexOfFirstBook = indexOfLastBook - itemsPerPage;
+  const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
+
+  return (
     <div className="App">
       <Header title="BookQuest - API Search Engine" />
       <SearchForm onSearch={handleSearch} />
@@ -58,19 +56,15 @@ function App() {
         <>
           <div className="pagination-settings">
             <label htmlFor="pagination">Display books per page:</label>
-            <select
-              id="pagination"
-              value={itemsPerPage}
-              onChange={(e) => handlePaginationChange(Number(e.target.value))}
-            >
+            <select id="pagination" value={itemsPerPage} onChange={handlePaginationChange}>
               <option value="40">40 per page</option>
               <option value="20">20 per page</option>
             </select>
           </div>
           <BooksGrid books={currentBooks} onBookClick={handleBookClick} />
           <div className="pagination-controls">
-            <button className="prev-button" disabled={currentPage === 1} onClick={() => setCurrentPage(prev => prev - 1)}>Prev</button>
-            <button className="next-button" disabled={currentPage === Math.ceil(books.length / itemsPerPage)} onClick={() => setCurrentPage(prev => prev + 1)}>Next</button>
+            <button className="prev-button" disabled={currentPage === 1} onClick={handlePrevPage}>Prev</button>
+            <button className="next-button" disabled={currentPage === Math.ceil(books.length / itemsPerPage)} onClick={handleNextPage}>Next</button>
           </div>
         </>
       )}

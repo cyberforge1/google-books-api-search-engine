@@ -41,12 +41,12 @@
 
 @media (min-width: 768px) {
   .books-grid {
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); // Improves layout on tablets
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
   .books-grid {
-      grid-template-columns: repeat(5, 1fr); // Fixes 5 columns on desktops and larger screens
+      grid-template-columns: repeat(5, 1fr);
   }
 }
