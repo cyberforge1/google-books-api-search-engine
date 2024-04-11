@@ -1,15 +1,13 @@
 // ModalBody.jsx
 
 const ModalBody = ({ book }) => {
-    // Function to remove HTML tags from a string
     const stripHtml = (html) => {
-        if (!html) return ''; // Return empty string if html is null or undefined
+        if (!html) return '';
         const tempDivElement = document.createElement("div");
         tempDivElement.innerHTML = html;
         return tempDivElement.textContent || tempDivElement.innerText || "";
     };
 
-    // Use the stripHtml function on the book's description
     const cleanDescription = stripHtml(book.description);
 
     return (

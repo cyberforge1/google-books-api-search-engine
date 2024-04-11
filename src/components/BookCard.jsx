@@ -1,8 +1,8 @@
-// BookCard.jsx
-import React from 'react';
-import './BookCard.scss'; // Path might need adjustment based on your project structure
 
-// Inside BookCard.jsx
+import React from 'react';
+import './BookCard.scss'; 
+
+
 const BookCard = ({ book, onClick }) => {
   return (
     <div className="book-card" onClick={onClick}>

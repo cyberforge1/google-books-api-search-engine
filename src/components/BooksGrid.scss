@@ -1,8 +1,8 @@
 // BooksGrid.scss
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); // Creates a responsive number of columns
-    gap: 50px; // Spacing between grid items
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 50px; 
     padding: 20px;
   }
   
@@ -14,7 +14,7 @@
   }
   
   .book-image {
-    width: 100%; // Makes the image responsive within the grid item
+    width: 100%; 
     height: auto;
     object-fit: cover;
   }
@@ -39,10 +39,9 @@
     overflow: hidden;
   }
   
-  // Example of a media query for larger screens
   @media (min-width: 768px) {
     .books-grid {
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); // Adjusts the min column width for larger screens
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
     }
   }
   

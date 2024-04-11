@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { fetchBooks, fetchBookDetails } from './services/BooksService.js'; // Adjust the path as necessary
-import BooksGrid from './components/BooksGrid.jsx'; // Adjust the path as necessary
-import Header from './components/Header.jsx'; // Adjust the path as necessary
-import SearchForm from './components/SearchForm.jsx'; // Adjust the path as necessary
-import './App.scss'; // Adjust the path as necessary
+import { fetchBooks, fetchBookDetails } from './services/BooksService.js';
+import BooksGrid from './components/BooksGrid.jsx';
+import Header from './components/Header.jsx'; 
+import SearchForm from './components/SearchForm.jsx'; 
+import './App.scss';
 import Modal from './components/Modal';
 
 
@@ -14,7 +14,7 @@ function App() {
   const handleSearch = async (query) => {
     const books = await fetchBooks(query);
     setBooks(books);
-    console.log(books); // Log the fetched book details to the console
+    console.log(books);
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,9 +22,9 @@ function App() {
 
   const handleBookClick = async (book) => {
     try {
-      const detailedBook = await fetchBookDetails(book.id); // Fetch detailed information
-      console.log(detailedBook); // Log the fetched book details to the console
-      setSelectedBook(detailedBook); // Use detailed book information for the modal
+      const detailedBook = await fetchBookDetails(book.id);
+      console.log(detailedBook);
+      setSelectedBook(detailedBook);
       setIsModalOpen(true);
     } catch (error) {
       console.error('Failed to fetch book details:', error);
@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title="Google Books API Search Engine" />
+      <Header title="BookQuest - API Search Engine" />
       <SearchForm onSearch={handleSearch} />
       <BooksGrid books={books} onBookClick={handleBookClick} />
       <Modal show={isModalOpen} onClose={handleCloseModal} book={selectedBook} />

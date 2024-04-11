@@ -1,6 +1,6 @@
-// Header.js
+
 import React from 'react';
-import './Header.scss'; // Assuming you have a SCSS file for styles
+import './Header.scss'; 
 
 const Header = ({ title }) => {
   return (

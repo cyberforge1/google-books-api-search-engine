@@ -1,6 +1,6 @@
-// BooksGrid.jsx
+
 import React from 'react';
-import BookCard from './BookCard'; // Adjust the path as necessary
+import BookCard from './BookCard'; 
 import './BooksGrid.scss';
 
 const BooksGrid = ({ books, onBookClick }) => {

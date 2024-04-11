@@ -1,12 +1,16 @@
-// Header.scss
+
 .header {
-    background-color: powderblue; // Example background color
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .header h1 {
-    color: #333; // Example text color
-    font-size: 24px;
-    margin: 0;
-  }
+  background-color: powderblue;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header h1 {
+  color: #202124;
+  font-size: 28px;
+  margin: 0;
+  font-weight: 400; 
+  letter-spacing: -0.5px;
+}

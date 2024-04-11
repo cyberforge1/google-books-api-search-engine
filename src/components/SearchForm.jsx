@@ -1,14 +1,14 @@
-// SearchForm.js
+
 import React, { useState } from 'react';
-import './SearchForm.scss'; // Assuming you have a SCSS file for styles
+import './SearchForm.scss';
 
 const SearchForm = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-    onSearch(inputValue); // Call the onSearch function passed as a prop with the input value
-    setInputValue(''); // Reset the input value
+    event.preventDefault(); 
+    onSearch(inputValue); 
+    setInputValue(''); 
   };
 
   return (

@@ -15,12 +15,12 @@
   background: white;
   padding: 20px;
   border-radius: 5px;
-  width: 500px; /* Set a consistent width */
-  height: 600px; /* Set a consistent height */
+  width: 500px;
+  height: 600px;
   position: relative;
-  overflow: hidden; /* Hide overflow */
+  overflow: hidden;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
+  flex-direction: column;
   z-index: 1001;
 }
 
@@ -28,13 +28,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc; /* Optional: adds a visual separation */
-  padding-bottom: 10px; /* Space between header and body */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
 .modal-title {
-  margin: 0; /* Adjust title margin as needed */
-  font-size: 1.5rem; /* Adjust title size as needed */
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .modal-close-button {
@@ -51,14 +51,14 @@
 }
 
 .modal-body {
-  overflow-y: auto; /* Enable vertical scrolling */
-  flex: 1; /* Allow the body to expand to fill available space */
-  padding: 10px 0; /* Adjust padding as needed */
+  overflow-y: auto;
+  flex: 1;
+  padding: 10px 0;
 }
 
 .book-image {
   display: block;
-  margin: 0 auto; /* Center the book image */
-  max-height: 200px; /* Limit image size */
-  margin-bottom: 20px; /* Space between image and text */
+  margin: 0 auto;
+  max-height: 200px;
+  margin-bottom: 20px;
 }
