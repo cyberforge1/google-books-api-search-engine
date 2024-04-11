@@ -1,4 +1,3 @@
-// ModalBody.jsx
 
 const ModalBody = ({ book }) => {
     const stripHtml = (html) => {

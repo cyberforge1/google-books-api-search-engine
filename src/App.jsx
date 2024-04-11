@@ -1,4 +1,3 @@
-// App.jsx
 
 import React, { useState } from 'react';
 import { fetchBooks, fetchBookDetails } from './services/BooksService.js';
@@ -57,8 +56,8 @@ function App() {
           <div className="pagination-settings">
             <label htmlFor="pagination">Display books per page:</label>
             <select id="pagination" value={itemsPerPage} onChange={handlePaginationChange}>
-              <option value="40">40 per page</option>
               <option value="20">20 per page</option>
+              <option value="40">40 per page</option>
             </select>
           </div>
           <BooksGrid books={currentBooks} onBookClick={handleBookClick} />

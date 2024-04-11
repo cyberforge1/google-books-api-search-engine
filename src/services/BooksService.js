@@ -1,6 +1,4 @@
 
-// BooksService.js
-
 const GOOGLE_BOOKS_API_ENDPOINT = 'https://www.googleapis.com/books/v1/volumes';
 
 export const fetchBooks = async (query, maxResults = 40) => {
@@ -9,6 +7,9 @@ export const fetchBooks = async (query, maxResults = 40) => {
 
   try {
     const response = await fetch(requestURL);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
     const data = await response.json();
     if (!data.items || data.items.length === 0) {
       console.log('No results found for:', query);
@@ -24,10 +25,10 @@ export const fetchBooks = async (query, maxResults = 40) => {
     }));
   } catch (error) {
     console.error('Error fetching books:', error);
+    alert('There was an error fetching your books');
     return [];
   }
 };
-
 
 
 
@@ -36,6 +37,9 @@ export const fetchBookDetails = async (bookId) => {
 
   try {
     const response = await fetch(requestURL);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
     const data = await response.json();
     return {
       id: data.id,
@@ -52,6 +56,7 @@ export const fetchBookDetails = async (bookId) => {
     };
   } catch (error) {
     console.error('Error fetching book details:', error);
+    alert('There was an error fetching your book details');
     return null;
   }
 };

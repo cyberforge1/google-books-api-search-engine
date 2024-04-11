@@ -1,5 +1,3 @@
-// SearchForm.jsx
-
 
 import React, { useState } from 'react';
 import './SearchForm.scss';
@@ -30,3 +28,4 @@ const SearchForm = ({ onSearch }) => {
 };
 
 export default SearchForm;
+
