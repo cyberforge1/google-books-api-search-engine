@@ -23,7 +23,7 @@ function App() {
   const handlePaginationChange = (event) => {
     const newItemsPerPage = Number(event.target.value);
     setItemsPerPage(newItemsPerPage);
-    setCurrentPage(1); // Reset to the first page when items per page changes
+    setCurrentPage(1);
   };
 
   const handleBookClick = async (book) => {
