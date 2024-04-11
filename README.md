@@ -9,7 +9,7 @@ This project will allow the user to search for a book in the Google Books Databa
 
 # Screenshot
 
-![Local image](public/bookquest.jpg "Project Screenshot")
+![Local image](public/bookquest.png "Project Screenshot")
 
 # Table of Contents
 - Goals
