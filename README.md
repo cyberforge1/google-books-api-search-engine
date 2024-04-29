@@ -1,73 +1,71 @@
 
-
-# Google Books API Search Engine
+# Google Books API Search Engine README
 
 ## Project Overview
 
-This project will allow the user to search for a book in the Google Books Database. This will be achieved by making asynchronous requests to the API and displaying the results dynamically in a React application. 
+This application serves as an interactive platform where users can search for books within the Google Books database and view detailed information about each title.
 
-## Deployment
+## Deployment Link
 
-https://bookquest-api-search-engine.netlify.app/
-
+[Click here to view the application.](https://bookquest-api-search-engine.netlify.app/)
 
 ## Screenshot
 
-![Local image](public/bookquest.png "Project Screenshot")
+![Application Screenshot](public/bookquest.png "Project Screenshot")
 
 ## Table of Contents
-- Goals
-- How to use
-- Tech Stack
-- Implementation
-- Code Function & Design Decisions
-- Issues & Bugs
-- Additions & Improvements
-
-
-## Goals
-
-- To create an modular and reactive UI with React
-- Implementation of asynchronous programming to fetch search engine results
-
-
-## How to use / Important ELements
-
-This application will have the following features:
-
-1) A simple landing page that has a search bar displayed at the center of the page
-2) A main page that will dynamically display the search results received from the API request with the ability to:
-    - dynamically display cards on a page
-    - cards will respond to user interaction 
-    - will display all relevant info in the card
-    - will open a modal on click to display more detailed information
-    - will create new pages based on the amount of results returned 
-    - This page will have a link to homepage, a search bar, results per page, display page number and allow the user to change page
-
+- [Tech Stack](#tech-stack)
+- [Goals](#goals)
+- [How to use](#how-to-use)
+- [Implementation](#implementation)
+- [Code / Important Elements / Design Decisions](#code--important-elements--design-decisions)
+- [Issues & Bugs](#issues--bugs)
+- [Additions & Improvements](#additions--improvements)
+- [Learning Highlights](#learning-highlights)
 
 ## Tech Stack
 
-HTML
-CSS/SCSS
-Git 
-React 
-Javascript 
-Bootstrap
-Google Books API
-Netlify
+- HTML
+- CSS/SCSS
+- JavaScript
+- React
+- Git
+- Google Books API
 
+## Goals
+
+The main objective is to provide a responsive, user-friendly interface for book enthusiasts to explore books and get comprehensive details via the Google Books API.
+
+## How to Use
+
+To use the application, simply enter a book title in the search form and submit. The results will be displayed in a grid, where more details can be viewed by clicking on each book.
 
 ## Implementation
 
-    - MVP (basic requirements)
+- **MVP (basic requirements)**: Features a book search functionality with a responsive grid display.
+- **User Interface**: Utilizes Flexbox or CSS Grid for layout, ensuring responsiveness across devices.
+- **Logic Strategy**: Asynchronous API requests fetch book data based on user input.
 
-    - User Interface
+## Code / Important Elements / Design Decisions
 
-    - Logic Strategy 
+- Pagination is implemented to return 20 results per page to enhance user experience.
+- SCSS is used with variables for themes, facilitating easier theme changes.
 
-## Code
+## Issues & Bugs
 
-## Issues / Bugs
+Current issues include handling missing data from API responses, which is being addressed to prevent application errors.
 
-## Potential Additions
+## Additions & Improvements
 
+Future improvements will include:
+- Implementation of React Router DOM for better navigation.
+- Enhanced modal functionality for detailed book information.
+
+## Learning Highlights
+
+This project highlighted the importance of asynchronous programming in React and the effective use of API data to enhance user interfaces.
+
+Contact Me:
+- Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
+- Visit my [GitHub](https://github.com/cyberforge1) for more projects.
+- Or send me an email at obj809@gmail.com
