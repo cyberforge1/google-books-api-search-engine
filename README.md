@@ -61,7 +61,7 @@ Future improvements will include:
 - Creating an initial fetch request when the project loads
 - Implementation of React Router DOM for better navigation.
 - Enhanced modal functionality for detailed book information.
-- Additional user feedback for book searches
+- Additional user feedback for book searches 
 - Add new theme and styling 
 - Edits to the book card and book modal components
 
