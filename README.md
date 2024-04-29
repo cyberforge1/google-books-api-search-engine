@@ -7,7 +7,7 @@ This application serves as an interactive platform where users can search for bo
 
 ## Deployment Link
 
-[Click here to view the application.](https://bookquest-api-search-engine.netlify.app/)
+This Search Engine is live! Check it out [here].(https://bookquest-api-search-engine.netlify.app/)
 
 ## Screenshot
 
@@ -58,8 +58,12 @@ Current issues include handling missing data from API responses, which is being 
 ## Additions & Improvements
 
 Future improvements will include:
+- Creating an initial fetch request when the project loads
 - Implementation of React Router DOM for better navigation.
 - Enhanced modal functionality for detailed book information.
+- Additional user feedback for book searches
+- Add new theme and styling 
+- Edits to the book card and book modal components
 
 ## Learning Highlights
 
