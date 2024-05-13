@@ -1,5 +1,5 @@
 
-# Google Books API Search Engine README
+# BookQuest - Google Books API Search Engine
 
 ## Project Overview
 
