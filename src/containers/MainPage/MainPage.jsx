@@ -24,6 +24,10 @@ const MainPage = () => {
         }
     }, [initialQuery]);
 
+    useEffect(() => {
+        console.log("Selected Book Changed:", selectedBook); // Logs whenever selectedBook changes
+    }, [selectedBook]);
+
     const handleSearch = async (query) => {
         const fetchedBooks = await fetchBooks(query);
         setBooks(fetchedBooks);
@@ -35,9 +39,10 @@ const MainPage = () => {
             const bookDetails = await fetchBookDetails(bookId);
             setSelectedBook(bookDetails);
             setIsModalOpen(true);
+            console.log("Book details:", bookDetails)
         } catch (error) {
             console.error("Failed to fetch book details:", error);
-            // Handle error (e.g., notify the user)
+            // Optionally, handle this error in the UI
         }
     };
 
@@ -52,7 +57,7 @@ const MainPage = () => {
 
     const handlePaginationChange = (event) => {
         setItemsPerPage(Number(event.target.value));
-        setCurrentPage(1);
+        setCurrentPage(1); // Ensure we return to the first page when changing the number of items per page
     };
 
     const indexOfLastBook = currentPage * itemsPerPage;
@@ -65,7 +70,7 @@ const MainPage = () => {
             <Header title="BookQuest - API Search Engine" />
             <SearchForm onSearch={handleSearch} />
             <Settings itemsPerPage={itemsPerPage} onItemsPerPageChange={handlePaginationChange} />
-            <BooksGrid books={currentBooks} onBookClick={(book) => handleBookClick(book.id)} />
+            <BooksGrid books={currentBooks} onBookClick={handleBookClick} />
             <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
             {isModalOpen && (
                 <Modal show={isModalOpen} onClose={handleCloseModal} book={selectedBook} />

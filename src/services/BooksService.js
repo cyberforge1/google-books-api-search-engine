@@ -38,14 +38,13 @@ export const fetchBookDetails = async (bookId) => {
   const requestURL = `${GOOGLE_BOOKS_API_ENDPOINT}/${bookId}`;
   try {
     const response = await fetch(requestURL);
-    const data = await response.json();
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-    console.log('Fetched book details:', data);  // Logging the data
-    return data;
+    const data = await response.json();
+    return data; // Adjust according to your data structure
   } catch (error) {
     console.error('Error fetching book details:', error);
-    return null;  // Ensure you handle this case in your component
+    return null;
   }
 };

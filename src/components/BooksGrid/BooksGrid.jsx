@@ -3,7 +3,7 @@ import React from 'react';
 import BookCard from '../BookCard/BookCard.jsx'; 
 import './BooksGrid.scss';
 
-const BooksGrid = ({ books, isLoading }) => {
+const BooksGrid = ({ books, onBookClick, isLoading }) => {
   if (isLoading) {
     return (
       <div className="books-grid-loading">
@@ -16,7 +16,7 @@ const BooksGrid = ({ books, isLoading }) => {
   return (
     <div className="books-grid">
       {books.map((book) => (
-        <BookCard key={book.id} book={book} />
+        <BookCard key={book.id} book={book} onClick={() => onBookClick(book.id)} />
       ))}
     </div>
   );
