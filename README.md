@@ -12,7 +12,7 @@ This Search Engine is live! Check it out [here](https://bookquest-api-search-eng
 
 ## Screenshot
 
-![Application Screenshot](public/bookquest-screenshot.png "Project Screenshot")
+![Application Screenshot](public/search-screenshot.png "Project Screenshot")
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)
