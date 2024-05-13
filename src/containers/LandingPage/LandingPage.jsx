@@ -19,7 +19,7 @@ function LandingPage() {
                 onClick={handleNavigate}
                 className="landing-button"
             >
-                Enter BookQuest
+                Start BookQuest
             </button>
         </div>
     );
