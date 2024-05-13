@@ -1,7 +1,9 @@
+// SearchResultsPage.jsx
+
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import BooksGrid from './BooksGrid';
-import { fetchBooks } from '../services/BooksService';
+import BooksGrid from '../BooksGrid/BooksGrid.jsx';
+import { fetchBooks } from '../..services/BooksService';
 
 const SearchResultsPage = () => {
   const [books, setBooks] = useState([]);

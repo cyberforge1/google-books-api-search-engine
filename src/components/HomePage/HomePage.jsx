@@ -1,8 +1,10 @@
+// HomePage.jsx
+
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from './Header';
-import SearchForm from './SearchForm';
+import Header from '../Header/Header';
+import SearchForm from '../SearchForm/SearchForm';
 
 const HomePage = () => {
   let navigate = useNavigate();

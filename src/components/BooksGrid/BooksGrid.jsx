@@ -1,6 +1,7 @@
+// BooksGrid.jsx
 
 import React from 'react';
-import BookCard from './BookCard'; 
+import BookCard from '../BookCard/BookCard.jsx'; 
 import './BooksGrid.scss';
 
 const BooksGrid = ({ books, onBookClick }) => {
