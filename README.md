@@ -12,7 +12,7 @@ This Search Engine is live! Check it out [here](https://bookquest-api-search-eng
 
 ## Screenshot
 
-![Application Screenshot](public/bookquest.png "Project Screenshot")
+![Application Screenshot](public/bookquest-screenshot.png "Project Screenshot")
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)
@@ -28,7 +28,7 @@ This Search Engine is live! Check it out [here](https://bookquest-api-search-eng
 
 - HTML
 - CSS/SCSS
-- JavaScript
+- JavaScript 
 - React
 - Git
 - Google Books API
