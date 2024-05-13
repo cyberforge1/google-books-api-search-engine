@@ -1,5 +1,6 @@
 // Pagination.jsx
 import React from 'react';
+import './Pagination.scss';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
