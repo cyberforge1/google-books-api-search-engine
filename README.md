@@ -49,7 +49,7 @@ Type a subject, author, title, or other book information into the search bar and
 
 
 ## Project Features
-- [x] Queries sent to the Google Books API for specific information
+- [x] Sends queries to the Google Books API to search for books and retrieve specific information
 - [x] A randomized query sent when entering the website 
 - [x] Pagination of data returned 
 - [x] Interactive modals to display specific data
