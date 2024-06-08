@@ -1,31 +1,31 @@
-
 # BookQuest - Google Books API Search Engine
 
-## Project Overview
 
-This application serves as an interactive platform where users can search for books within the Google Books database and view detailed information about each title.
+## Project Overview
+This application is an interactive platform built with React where users can search for books in the Google Books database and view detailed information about each title.
+
 
 ## Deployment Link
-
 This Search Engine is live! Check it out [here](https://bookquest-api-search-engine.netlify.app/).
 
 
-## Screenshot
-
+## Screenshots
 ![Application Screenshot](public/search-screenshot.png "Project Screenshot")
 
 ## Table of Contents
+- [Goals & MVP](#goals--MVP)
 - [Tech Stack](#tech-stack)
-- [Goals](#goals)
-- [How to use](#how-to-use)
-- [Implementation](#implementation)
-- [Code / Important Elements / Design Decisions](#code--important-elements--design-decisions)
-- [Issues & Bugs](#issues--bugs)
+- [Build Steps](#build-steps)
+- [Project Features](#project-features)
 - [Additions & Improvements](#additions--improvements)
 - [Learning Highlights](#learning-highlights)
+- [Challenges](#challenges)
+
+## Goals & MVP
+The main objective is to provide a responsive, user-friendly interface for book enthusiasts to explore books and get comprehensive details via the Google Books API.
+
 
 ## Tech Stack
-
 - HTML
 - CSS/SCSS
 - JavaScript 
@@ -33,44 +33,51 @@ This Search Engine is live! Check it out [here](https://bookquest-api-search-eng
 - Git
 - Google Books API
 
-## Goals
 
-The main objective is to provide a responsive, user-friendly interface for book enthusiasts to explore books and get comprehensive details via the Google Books API.
+## Build Steps
+1. Clone the project from GitHub:
+   ```bash
+   git clone git@github.com:cyberforge1/imageForge.git
 
-## How to Use
+9. Run the application locally:
+    ```bash
+    npm run dev
+    ```
 
-To use the application, simply enter a book title in the search form and submit. The results will be displayed in a grid, where more details can be viewed by clicking on each book.
+## How To Use
+Type a subject, author, title, or other book information into the search bar and click the search button to find specific information that matches these fields.
 
-## Implementation
 
-- **MVP (basic requirements)**: Features a book search functionality with a responsive grid display.
-- **User Interface**: Utilizes Flexbox or CSS Grid for layout, ensuring responsiveness across devices.
-- **Logic Strategy**: Asynchronous API requests fetch book data based on user input.
+## Project Features
+- [x] Queries sent to the Google Books API for specific information
+- [x] A randomized query sent when entering the website 
+- [x] Pagination of data returned 
+- [x] Interactive modals to display specific data
 
-## Code / Important Elements / Design Decisions
-
-- Pagination is implemented to return 20 results per page to enhance user experience.
-- SCSS is used with variables for themes, facilitating easier theme changes.
-
-## Issues & Bugs
-
-Current issues include handling missing data from API responses, which is being addressed to prevent application errors.
 
 ## Additions & Improvements
+- [ ] Addition of a search results for " " and number of results
+- [ ] Create a series of API calls to fetch all results 
+- [ ] Refined styling of header and button components
+- [ ] Addition of footer with social media icons
+- [ ] Scale up image quality
+- [ ] Add pointer / integrate zambia modal 
 
-Future improvements will include:
-- Creating an initial fetch request when the project loads
-- Implementation of React Router DOM for better navigation.
-- Enhanced modal functionality for detailed book information.
-- Additional user feedback for book searches 
-- Add new theme and styling 
-- Edits to the book card and book modal components
 
 ## Learning Highlights
-
 This project highlighted the importance of asynchronous programming in React and the effective use of API data to enhance user interfaces.
 
-Contact Me:
+
+## Challenges
+- Creating a modal that would close when anywhere else in the application was clicked
+- Implementing a series of API calls to collect all associated data
+
+## Contact Me
 - Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
-- Visit my [GitHub](https://github.com/cyberforge1) for more projects.
+- Check out my [GitHub](https://github.com/cyberforge1) for more projects.
 - Or send me an email at obj809@gmail.com
+<br />
+Thanks for your interest in this project. Feel free to reach out with any thoughts or questions.
+<br />
+<br />
+Oliver Jenkins © 2024

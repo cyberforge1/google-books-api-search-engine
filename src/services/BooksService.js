@@ -42,7 +42,7 @@ export const fetchBookDetails = async (bookId) => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
-    return data; // Adjust according to your data structure
+    return data;
   } catch (error) {
     console.error('Error fetching book details:', error);
     return null;
