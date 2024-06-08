@@ -37,7 +37,7 @@ The main objective is to provide a responsive, user-friendly interface for book 
 ## Build Steps
 1. Clone the project from GitHub:
    ```bash
-   git clone git@github.com:cyberforge1/imageForge.git
+   git clone git@github.com:cyberforge1/google-books-api-search-engine.git
 
 9. Run the application locally:
     ```bash
