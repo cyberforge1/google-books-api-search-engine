@@ -1,0 +1,40 @@
+// LandingPage.scss
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Full viewport height
+  width: 100vw; // Full viewport width
+  background-image: url('../bookquest-background.png'); // Ensure this path is correct relative to your SCSS file
+  background-size: cover; // Cover the entire container
+  background-position: center; // Center the background image
+}
+
+.landing-button {
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7); // Semi-transparent background
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 2%;
+  border: 2px solid rgba(255, 255, 255, 0.6); // Light semi-transparent border
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Subtle shadow
+
+  &:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+      transform: scale(1.05); // Slightly enlarge on hover
+  }
+}

@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+body{
+    background-color: #FAF9F6;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .prev-button, .next-button {
+    padding: 10px 20px;
+    background-color: #55AEE0;
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+  
+    &:disabled {
+      background-color: #ccc; 
+      cursor: default; 
+    }
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }
+
+
+.pagination-settings {
+    display: flex;
+    align-items: center; 
+    margin: 20px 0; 
+    label {
+      margin-right: 10px; 
+      font-size: 16px;
+      color: #333; 
+    }
+  
+    select {
+      padding: 8px 12px; 
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: white;
+      font-size: 16px; 
+      cursor: pointer; 
+      &:hover {
+        border-color: #888; 
+      }
+  
+      &:focus {
+        outline: none; 
+        border-color: #0056b3;
+      }
+    }
+  }

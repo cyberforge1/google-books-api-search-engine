@@ -1,0 +1,26 @@
+// Pagination.scss
+.pagination-controls {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-controls button {
+    background-color: rgb(110,162,179); // Same as the header background
+    color: white; // Same as the header text color
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination-controls button:hover {
+    background-color: rgb(142, 121, 161); // Lighter shade for hover
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: default;
+  }
