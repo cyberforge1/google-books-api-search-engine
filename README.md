@@ -2,8 +2,7 @@
 
 
 ## Project Overview
-A responsive search engine for exploring and retrieving detailed book information. Assembled with React, JavaScript, HTML, CSS/SCSS, and the Google Books API.
-
+A responsive search engine for exploring and retrieving detailed book information. Assembled with React, JavaScript, SCSS, and the Google Books API.
 
 ## Deployment Link
 This Search Engine is live! Check it out [here](https://bookquest-api-search-engine.netlify.app/).
