@@ -2,7 +2,7 @@
 
 
 ## Project Overview
-This application is an interactive platform built with React where users can search for books in the Google Books database and view detailed information about each title.
+A responsive search engine for exploring and retrieving detailed book information. Assembled with React, JavaScript, HTML, CSS/SCSS, and the Google Books API.
 
 
 ## Deployment Link
