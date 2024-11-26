@@ -1,11 +1,20 @@
 // BooksService.js
 
-const API_KEY = process.env.REACT_APP_GOOGLE_BOOKS_API_KEY;
+const API_KEY = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
 const GOOGLE_BOOKS_API_ENDPOINT = 'https://www.googleapis.com/books/v1/volumes';
+
+// Verify that the API key is loaded
+if (!API_KEY) {
+  console.error('VITE_GOOGLE_BOOKS_API_KEY is not defined!');
+} else {
+  console.log('API_KEY:', API_KEY);
+}
 
 export const fetchBooks = async (query, maxResults = 40) => {
   const formattedQuery = encodeURIComponent(query);
   const requestURL = `${GOOGLE_BOOKS_API_ENDPOINT}?q=${formattedQuery}&maxResults=${maxResults}&key=${API_KEY}`;
+
+  console.log('Request URL:', requestURL); // Debug the request URL
 
   try {
     const response = await fetch(requestURL);
@@ -20,7 +29,6 @@ export const fetchBooks = async (query, maxResults = 40) => {
   }
 };
 
-// Ensure fetchBookDetails is exported
 export const fetchBookDetails = async (bookId) => {
   const requestURL = `${GOOGLE_BOOKS_API_ENDPOINT}/${bookId}`;
 
@@ -35,3 +43,6 @@ export const fetchBookDetails = async (bookId) => {
     return null;
   }
 };
+
+// Debugging: Check if the environment variable is loaded correctly
+console.log('API_KEY:', import.meta.env.VITE_GOOGLE_BOOKS_API_KEY);

@@ -1,6 +1,5 @@
 // App.jsx
 
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './containers/MainPage/MainPage.jsx';
 import LandingPage from './containers/LandingPage/LandingPage.jsx';  // Import the new LandingPage
@@ -11,8 +10,8 @@ function App() {
         <Router>
             <div className="App">
                 <Routes>
-                    <Route path="/" element={<LandingPage />} />  // Default route now goes to LandingPage
-                    <Route path="/main" element={<MainPage />} />  // MainPage is now under '/main'
+                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/main" element={<MainPage />} />
                 </Routes>
             </div>
         </Router>
